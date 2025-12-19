@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@theme {
+  /* Define Custom Colors */
+  --color-tamil-black: #000000;
+  --color-tamil-dark: #0a0a0a;
+  --color-tamil-gold: #D4AF37;
+  --color-tamil-gold-light: #F4C430;
+
+  /* Define Custom Font */
+  --font-sans: 'Inter', sans-serif;
+
+  /* Define Custom Animation */
+  --animate-spin-slow: spin 8s linear infinite;
+}
+
+/* Global Resets */
+body {
+  background-color: var(--color-tamil-black);
+  color: #ffffff;
+  overflow-x: hidden;
+  font-family: var(--font-sans);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-tamil-black);
+}
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-tamil-gold);
+}
