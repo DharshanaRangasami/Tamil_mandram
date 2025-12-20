@@ -80,7 +80,7 @@ const UpcomingEvents = () => {
       ease: "easeInOut",     // Smooth start and end
       repeat: Infinity,      // Loops forever
       repeatType: "loop",
-      repeatDelay: 1         // Waits 1 second before starting the next shine
+      repeatDelay: 0.5         // Waits 1 second before starting the next shine
     }}
   />
 

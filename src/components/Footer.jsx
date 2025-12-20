@@ -39,15 +39,15 @@ const Footer = () => {
             </p>
             <div className="flex items-start gap-3 text-gray-400 text-sm">
               <MapPin size={20} className="text-tamil-gold shrink-0 mt-1" />
-              <p>மகாராஜா கருத்தரங்கக்கூடம்,<br/>கொங்கு பொறியியல் கல்லூரி,<br/>பெருந்துறை.</p>
+              <p>மகாராஜா கருத்தரங்கக்கூடம்,<br/>கொங்கு பொறியியல் கல்லூரி,<br/>பெருந்துறை - 638060.</p>
             </div>
           </div>
 
           {/* Faculty Coordinators */}
           <div className="col-span-1 lg:col-span-1">
             <h3 className="text-white font-bold text-xl mb-8 border-l-4 border-tamil-gold pl-4">மன்ற ஒருங்கிணைப்பாளர்கள்</h3>
-            <ContactItem name="Dr. S. Ramesh" role="மன்ற ஒருங்கிணைப்பாளர்" phone="+91 98765 43210" />
-            <ContactItem name="Prof. M. Anitha" role="மன்ற ஒருங்கிணைப்பாளர்" phone="+91 98765 43211" />
+            <ContactItem name="முனைவர். இரா.மௌலீசுவரப்பிரபு" role="மன்ற ஒருங்கிணைப்பாளர்" phone="+91 98765 43210" />
+            <ContactItem name="முனைவர். ஆ.சீ.பெரியசாமி மணிகண்டன்" role="மன்ற ஒருங்கிணைப்பாளர்" phone="+91 98765 43211" />
           </div>
 
           {/* Student Representatives */}
