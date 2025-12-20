@@ -54,7 +54,7 @@ const Footer = () => {
           <div className="col-span-1 lg:col-span-1">
             <h3 className="text-white font-bold text-xl mb-8 border-l-4 border-tamil-gold pl-4">மன்ற<br/>உறுப்பினர்கள்</h3>
             <ContactItem name="பகலவன் க ச" role="செயலாளர்" phone="+91 91591 32429" />
-            <ContactItem name="கௌசிக் செ" role="கூடுதல் செயலாளர்" phone="+91 73058 42119" />
+            <ContactItem name="கனிகா கு" role="பொருளாளர்" phone="+91 97889 86926" />
           </div>
 
           {/* Quick Links */}

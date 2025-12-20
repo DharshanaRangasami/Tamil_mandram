@@ -20,7 +20,7 @@ const UpcomingEvents = () => {
       {/* Header */}
       <div className="flex items-center gap-4 mb-8">
         <h2 className="text-2xl font-bold text-tamil-gold">நிகழ்வுகள்</h2>
-        <div className="h-[1px] bg-white/10 flex-1"></div>
+        <div className="h-[1px]  bg-white/10 flex-1"></div>
       </div>
 
       {/* Wide Banner Card */}
