@@ -83,8 +83,7 @@ const Footer = () => {
 
         {/* Copyright */}
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
-          <p>© 2025 Tamil Mandram. All rights reserved.</p>
-          <p>Designed with <span className="text-tamil-gold">♥</span> for Tamil Culture</p>
+          <p>© 2025 Zhagaram Tamil Mandram. All rights reserved.</p>
         </div>
       </div>
     </footer>
