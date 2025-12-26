@@ -22,7 +22,7 @@ const PongalNavbar = () => {
   }, [isOpen]);
 
   const navItems = [
-    { name: 'முகப்பு', path: '/' },
+    { name: 'முகப்பு', path: '/event' },
     { name: 'சிறப்புகள்', path: '/specialities' },
     { name: 'நிகழ்ச்சிகள்', path: '/events' },
     { name: 'தொடர்பு', path: '/contact' },

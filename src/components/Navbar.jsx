@@ -4,7 +4,7 @@ import PongalNavbar from "./PongalNavbar";
 
 const Navbar = () => {
   const location = useLocation();
-  const isEventsPage = location.pathname === "/events";
+  const isEventsPage = location.pathname === "/events" || '/event';
 
   return (
     <>
