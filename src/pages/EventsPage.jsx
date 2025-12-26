@@ -369,7 +369,10 @@
 
         
 
-        <Footer />
+       <footer id="contact">
+  <Footer />
+</footer>
+
       </div>
     );
   };

@@ -4,7 +4,8 @@ import PongalNavbar from "./PongalNavbar";
 
 const Navbar = () => {
   const location = useLocation();
-  const isEventsPage = location.pathname === "/events" || '/event';
+  const isEventsPage =   location.pathname === "/events" ||
+  location.pathname === "/specialities";  ;
 
   return (
     <>
@@ -24,20 +25,50 @@ const Navbar = () => {
 
           {/* Navigation Items */}
           <div className="flex gap-8 text-sm text-gray-300 items-center font-medium">
-            <Link to="/" className="hover:text-tamil-gold transition-colors">
+            <Link to="/" className="hover:text-tamil-gold transition-colors" 
+             onClick={() => {
+    if (location.pathname === "/") {
+      document
+        .getElementById("home")
+        ?.scrollIntoView({ behavior: "smooth" });
+    } else {
+      window.location.href = "/#home";
+    }
+  }}>
               முகப்பு
             </Link>
 
-            <Link to="/events" className="hover:text-tamil-gold transition-colors">
-              நிகழ்வுகள்
-            </Link>
+           <button
+  onClick={() => {
+    if (location.pathname === "/") {
+      document
+        .getElementById("upcoming-events")
+        ?.scrollIntoView({ behavior: "smooth" });
+    } else {
+      window.location.href = "/#upcoming-events";
+    }
+  }}
+  className="hover:text-tamil-gold transition-colors"
+>
+  நிகழ்வுகள்
+</button>
 
-            <Link
-              to="/contact"
-              className="hover:text-tamil-gold transition-colors"
-            >
-              தொடர்புக்கு
-            </Link>
+
+            <button
+  onClick={() => {
+    if (location.pathname === "/") {
+      document
+        .getElementById("contact")
+        ?.scrollIntoView({ behavior: "smooth" });
+    } else {
+      window.location.href = "/#contact";
+    }
+  }}
+  className="hover:text-tamil-gold transition-colors"
+>
+  தொடர்புக்கு
+</button>
+
           </div>
         </nav>
       )}

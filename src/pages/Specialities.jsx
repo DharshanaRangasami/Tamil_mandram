@@ -30,7 +30,7 @@ const Specialities = () => {
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="bg-rich-black/90 p-8 md:p-12 rounded-xl border border-gold/70 shadow-[0_0_30px_rgba(212,175,55,0.15)] backdrop-blur-sm"
+        className="bg-rich-black/90 p-8 mt-10 md:p-12 rounded-xl border border-gold/70 shadow-[0_0_30px_rgba(212,175,55,0.15)] backdrop-blur-sm"
       >
         
         {/* Main Heading Animated */}

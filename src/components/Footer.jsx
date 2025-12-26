@@ -115,31 +115,7 @@ const Footer = () => {
           </div>
 
           {/* QUICK LINKS */}
-          <div>
-            <h3 className="text-white font-semibold text-base sm:text-lg
-                           mb-3 sm:mb-6
-                           border-l-4 border-yellow-600 pl-3">
-              விரைவு இணைப்புகள்
-            </h3>
-
-            <ul className="space-y-1.5 sm:space-y-3 text-gray-400 text-sm sm:text-base">
-              <li>
-                <a onClick={scrollToTop} href="/" className="hover:text-yellow-600">
-                  முகப்பு
-                </a>
-              </li>
-              <li>
-                <a href="/events" className="hover:text-yellow-600">
-                  நிகழ்வுகள்
-                </a>
-              </li>
-              <li>
-                <a href="#contact" className="hover:text-yellow-600">
-                  தொடர்புக்கு
-                </a>
-              </li>
-            </ul>
-          </div>
+         
         </div>
 
         {/* COPYRIGHT */}

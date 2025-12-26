@@ -16,7 +16,7 @@ const LandingPage = () => {
           
           {/* --- HERO SECTION --- */}
           <section className="max-w-7xl mx-auto mb-12">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="grid md:grid-cols-2 gap-12 items-center" id='home'>
               
               <div className="flex flex-col justify-center h-full z-10 py-10">
                 <motion.div 
@@ -59,12 +59,18 @@ const LandingPage = () => {
           </section>
 
           {/* --- UPCOMING EVENTS BANNER --- */}
-          <UpcomingEvents />
+         <section id="upcoming-events">
+  <UpcomingEvents />
+</section>
+
 
       </div>
 
       {/* --- FOOTER --- */}
-      <Footer />
+     <footer id="contact">
+  <Footer />
+</footer>
+
 
     </div>
   );

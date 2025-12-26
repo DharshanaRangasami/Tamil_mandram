@@ -22,7 +22,6 @@ const PongalNavbar = () => {
   }, [isOpen]);
 
   const navItems = [
-    { name: 'முகப்பு', path: '/event' },
     { name: 'சிறப்புகள்', path: '/specialities' },
     { name: 'நிகழ்ச்சிகள்', path: '/events' },
     { name: 'தொடர்பு', path: '/contact' },
@@ -61,18 +60,35 @@ const PongalNavbar = () => {
             {/* Desktop Nav Links */}
             <div className="hidden md:flex space-x-3">
               {navItems.map((item) => {
-                const active = isActive(item.path);
-                return (
-                  <Link
-                    key={item.name}
-                    to={item.path}
-                    // Use DESKTOP specific styles
-                    className={`${desktopBaseStyles} ${active ? desktopActiveStyles : desktopInactiveStyles}`}
-                  >
-                    {item.name}
-                  </Link>
-                );
-              })}
+  const active = isActive(item.path);
+
+  if (item.name === "தொடர்பு") {
+    return (
+      <button
+        key={item.name}
+        onClick={() => {
+          document
+            .getElementById("contact")
+            ?.scrollIntoView({ behavior: "smooth" });
+        }}
+        className={`${desktopBaseStyles} ${desktopInactiveStyles}`}
+      >
+        {item.name}
+      </button>
+    );
+  }
+
+  return (
+    <Link
+      key={item.name}
+      to={item.path}
+      className={`${desktopBaseStyles} ${active ? desktopActiveStyles : desktopInactiveStyles}`}
+    >
+      {item.name}
+    </Link>
+  );
+})}
+
             </div>
 
             {/* Mobile Menu Toggle Button */}
@@ -105,35 +121,42 @@ const PongalNavbar = () => {
           isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
-        <div className="flex flex-col h-full">
-          {/* Drawer Header */}
-          <div className="flex items-center justify-end p-5 border-b border-gold/10">
-            <button
-              onClick={toggleMenu}
-              className="text-gold focus:outline-none hover:scale-110 transition-transform p-0"
-              aria-label="Close Menu"
-            >
-               <X size={28} />
-            </button>
-          </div>
+      <div className="flex flex-col py-4 overflow-y-auto">
+  {navItems.map((item) => {
+    const active = isActive(item.path);
 
-          {/* Drawer Links Container */}
-          <div className="flex flex-col py-4 overflow-y-auto">
-            {navItems.map((item) => {
-              const active = isActive(item.path);
-              return (
-                <Link
-                  key={item.name}
-                  to={item.path}
-                  onClick={() => setIsOpen(false)}
-                  className={`${mobileBaseStyles} ${active ? mobileActiveStyles : mobileInactiveStyles}`}
-                >
-                  {item.name}
-                </Link>
-              )
-            })}
-          </div>
-        </div>
+    if (item.name === "தொடர்பு") {
+      return (
+        <button
+          key={item.name}
+          onClick={() => {
+            document
+              .getElementById("contact")
+              ?.scrollIntoView({ behavior: "smooth" });
+            setIsOpen(false);
+          }}
+          className={`${mobileBaseStyles} ${mobileInactiveStyles}`}
+        >
+          {item.name}
+        </button>
+      );
+    }
+
+    return (
+      <Link
+        key={item.name}
+        to={item.path}
+        onClick={() => setIsOpen(false)}
+        className={`${mobileBaseStyles} ${
+          active ? mobileActiveStyles : mobileInactiveStyles
+        }`}
+      >
+        {item.name}
+      </Link>
+    );
+  })}
+</div>
+
       </div>
     </>
   );
