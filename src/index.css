@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@theme {
+  /* Define Custom Colors */
+  --color-tamil-black: #000000;
+  --color-tamil-dark: #0a0a0a;
+  --color-tamil-gold: #D4AF37;
+  --color-tamil-gold-light: #F4C430;
+
+  /* Define Custom Font */
+  --font-sans: 'Inter', sans-serif;
+
+  /* Define Custom Animation */
+  --animate-spin-slow: spin 8s linear infinite;
+}
+
+/* Global Resets */
+body {
+  background-color: var(--color-tamil-black);
+  color: #ffffff;
+  overflow-x: hidden;
+  font-family: var(--font-sans);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-tamil-black);
+}
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-tamil-gold);
+}
+
+/* 1. Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather:wght@700&display=swap');
+
+/* 2. Import Tailwind CSS */
+@import "tailwindcss";
+
+/* 3. Define Custom Theme Variables */
+@theme {
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Merriweather', serif;
+
+  --color-rich-black: #000; /* Rich Black */
+  --color-accent-red: #8B0000;
+
+  /* Define the gold shades */
+  --color-gold: #D4AF37;
+  --color-gold-light: #F4C430;
+  --color-gold-dark: #c4b59d;
+
+  --color-text-white: #ffffff;
+}
+
+/* 4. Apply base styles using variables directly */
+/* We don't need @apply here anymore, standard CSS works better */
+body {
+  background-color: var(--color-rich-black);
+  color: var(--color-text-white);
+  font-family: var(--font-sans);
+  
+  /* Ensure scrollbar looks good */
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-gold) var(--color-rich-black);
+}
